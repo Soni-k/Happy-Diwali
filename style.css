@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #ffefc1;
+	color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+	padding: 20px;
+}
+
+.container {
+	max-width: 500px;
+}
+
+h1 {
+	color: #ff8c00;
+	font-size: 2.5em;
+}
+
+p {
+	font-size: 1.2em;
+	margin: 10px 0;
+}
+
+.diya-container {
+	position: relative;
+	width: 60px;
+	height: 100px;
+	margin: 20px auto;
+}
+
+.diya-flame {
+	position: absolute;
+	width: 20px;
+	height: 70px;
+	background-color: #ff8c00;
+	border-radius: 50% 50% 0 0;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: flicker 1s infinite;
+}
+
+.diya-base {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background-color: #8b4513;
+	border-radius: 50% 50% 20% 20%;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.greeting {
+	margin-top: 20px;
+	font-size: 1.2em;
+	color: #d2691e;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Keyframes for flame flickering */
+@keyframes flicker {
+
+	0%,
+	100% {
+		transform: translate(-50%, 0);
+	}
+
+	50% {
+		transform: translate(-50%, -10px);
+	}
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 1em;
+	color: white;
+	background-color: #ff8c00;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #ff7000;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	p,
+	.greeting {
+		font-size: 1em;
+	}
+
+	.diya-container {
+		width: 40px;
+		height: 70px;
+	}
+
+	.diya-flame {
+		width: 15px;
+		height: 35px;
+	}
+}
